@@ -4,7 +4,7 @@ This repository contains the helper scripts to build [NNSVS](https://github.com/
 
 ## System requirements
 - Windows 10 64bit RS4(1803) or later: The helper scripts make use of curl and tar, which are added from Windows 10 RS4(1803). 
-- About 4GB of free storage space.
+- About 5-6GB of free storage space(4GB for system, and about 1-2 GB for singing voice database and temporary files).
 - [NVidia CUDA Toolkit (10.1/10.2)](https://developer.nvidia.com/cuda-toolkit) (optional): PyTorch supports CUDA 10.1 and 10.2. Be careful not to select CUDA 11.0.
 
 ## Build dependencies
@@ -23,8 +23,9 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 ## Usage
 1. Download this repository to where you want to create NNSVS environment.
 2. Launch VS2015 x64 Native Tools Command Prompt from Windows menu, and move to the directory where you download this repository. You can use the normal command prompt, but you have to set correct PATH, LIB, INCLUDE environment variables manually to use the toolchains.
-3. Run bootstrap.bat.
-4. Launch msys64/MSYS.exe and do as you like.
+3. If you want to use CUDA 10.1, please edit bootstrap_2nd.sh and change PyTorch installation setting. 
+4. Run bootstrap.bat.
+5. Launch msys64/MSYS.exe and do as you like.
 
 ## Known issues
 To use WinPython from MSYS2(mintty), you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it from pacman).
