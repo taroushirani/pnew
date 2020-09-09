@@ -19,7 +19,7 @@ set msys2_archive_path=%tmp_dir%\msys2.tar.xz
 set dest_root=%~dp0
 set msys2_dest_dir=%dest_root%
 
-set timeout_sec=15
+set timeout_sec=60
 
 rem main routine
 rem Remove old directories
@@ -60,9 +60,9 @@ echo Move python to /opt of MSYS2.
 move %tmp_dir%\%winpython_python_relative_path% %msys2_dest_dir%\msys64\opt\python
 
 echo Initialize MSYS2.
-%msys2_dest_dir%\msys64\msys2.exe /dev/null
+call %msys2_dest_dir%\msys64\msys2.exe /dev/null
 
-echo Wait to finish initialization of MSYS2.
+echo Wait %timeout_sec% seconds to finish initialization of MSYS2.
 timeout /t %timeout_sec% /nobreak >nul
 
 echo Add /opt/python to PATH.
