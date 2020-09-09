@@ -22,7 +22,7 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 
 ## Usage
 1. Download this repository to where you want to create NNSVS environment.
-2. Launch VS2015 x64 Native Tools Command Prompt from Windows menu, and move to the directory where you download this repository. You can use the normal command prompt, but you have to set correct PATH, LIB, INCLUDE environment variables manually to use the toolchains.
+2. Launch VS2015 x64 Native Tools Command Prompt from Windows menu, and move to the directory where you download this repository. You can also use the normal command prompt, but you have to set correct PATH, LIB, INCLUDE environment variables manually to use Visual Studio Build Tools.
 3. If you want to use CUDA 10.1, please edit bootstrap_2nd.sh and change PyTorch installation setting. 
 4. Run bootstrap.bat.
 5. Launch msys64/msys2.exe and do as you like.
