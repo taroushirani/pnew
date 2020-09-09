@@ -25,10 +25,10 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 2. Launch VS2015 x64 Native Tools Command Prompt from Windows menu, and move to the directory where you download this repository. You can use the normal command prompt, but you have to set correct PATH, LIB, INCLUDE environment variables manually to use the toolchains.
 3. If you want to use CUDA 10.1, please edit bootstrap_2nd.sh and change PyTorch installation setting. 
 4. Run bootstrap.bat.
-5. Launch msys64/MSYS.exe and do as you like.
+5. Launch msys64/msys2.exe and do as you like.
 
 ## Known issues
-1. To use WinPython interactively from mintty, you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it from pacman).
+1. To use WinPython interactively from mintty, you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it via pacman).
 2. "tar" program of MSYS2 is bsdtar, not GNU tar.  If you call tar from MSYS2, it may be Windows tar. In my experience, windows tar seems not to work with bzip2 of MSYS2. It becomes a problem when you run stage -1 of NNSVS recipe.  I recommend setting alias as tar=bsdtar.
 
 ## Resources
