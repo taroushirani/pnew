@@ -14,7 +14,8 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 
 1. "MSVC v140" contains the toolkit of Microsoft Visual C++ 14.0, but it lacks MSBuild.exe.
 2. "MSVC v142" contains MSBuild.exe.
-3. The latest version of Windows 10 SDK which Microsoft Visual C++ 14.0 on Windows 10 can handle is 10.0.14393.0. You can download it from [Windows SDK archive](https://developer.microsoft.com/windows/downloads/sdk-archive/), but it lacks rc.exe.
+3. The latest version of Windows 10 SDK which Microsoft Visual C++ 14.0 on Windows 10 can handle is 10.0.14393.0(for detail, please see [VS: Do not select a Windows SDK too high for current VS version (!2388) · Merge Requests · CMake / CMake · GitLab](https://gitlab.kitware.com/cmake/cmake/-/merge_requests/2388)).
+. You can download it from [Windows SDK archive](https://developer.microsoft.com/windows/downloads/sdk-archive/), but it lacks rc.exe.
 4. The latest Windows 10 SDK(10.0.18362.0) contains rc.exe.
 
 *Please be sure to check "MSVC v142", "Windows 10 SDK", "CMake", "MSVC v140" when you install "Visual Studio Build Tools".*
@@ -23,6 +24,9 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 1. Download this repository to where you want to create NNSVS environment.
 2. Launch VS2015 x64 Native Tools Command Prompt from Windows menu, and move to the directory where you download this repository. You can use the normal command prompt, but you have to set correct PATH, LIB, INCLUDE environment variables manually to use the toolchains.
 3. Run bootstrap.bat.
+
+## Known issues
+To use WinPython from mintty, you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it from pacman).
 
 ## Resources
 - [NNSVS](https://github.com/r9y9/nnsvs)
