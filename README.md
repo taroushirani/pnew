@@ -24,9 +24,10 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 1. Download this repository to where you want to create NNSVS environment.
 2. Launch VS2015 x64 Native Tools Command Prompt from Windows menu, and move to the directory where you download this repository. You can use the normal command prompt, but you have to set correct PATH, LIB, INCLUDE environment variables manually to use the toolchains.
 3. Run bootstrap.bat.
+4. Launch msys64/MSYS.exe and do as you like.
 
 ## Known issues
-To use WinPython from mintty, you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it from pacman).
+To use WinPython from MSYS2(mintty), you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it from pacman).
 
 ## Resources
 - [NNSVS](https://github.com/r9y9/nnsvs)
