@@ -1,5 +1,5 @@
 #! /bin/bash
-set -eux
+set -ux
 
 export PATH=/opt/python:/opt/python/Scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mingw64/bin
 
@@ -44,7 +44,7 @@ pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/wh
 #
 # Please be sure to check "MSVC v142", "Windows 10 SDK", "CMake", "MSVC v140" when you install "Visual Studio Build Tools".
 # 
-export PATH=/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/BuildTools/MSBuild/Current/Bin/amd64/:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio\ 14.0/VC/bin/amd64:/c/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.14393.0/x64/:/c/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.18362.0/x64/:$PATH
+export PATH=/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/BuildTools/MSBuild/Current/Bin/amd64/:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Community/MSBuild/Current/Bin/amd64/:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio\ 14.0/VC/bin/amd64:/c/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.14393.0/x64/:/c/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.18362.0/x64/:$PATH
 pip install pysptk
 git clone https://github.com/r9y9/nnmnkwii
 cd nnmnkwii && pip install . && cd $WORKING_DIR
