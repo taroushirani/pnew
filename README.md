@@ -1,6 +1,6 @@
 # pnew - (not so) portable NNSVS environment for Windows
 
-This repository contains the helper scripts to build [NNSVS](https://github.com/r9y9/nnsvs) environment for Windows. The environment made by these scripts makes use of [WinPython](https://winpython.github.io/) and [MSYS2](https://www.msys2.org/).  It is fully functional, and (not so) portable(total 4GB of disk usage).
+This repository contains the helper scripts to build [NNSVS](https://github.com/r9y9/nnsvs) environment for Windows. The environment made by these scripts is built from [WinPython](https://winpython.github.io/) and [MSYS2](https://www.msys2.org/).  It is fully functional, and (not so) portable(total 4GB of disk usage).
 
 ## System requirements
 - Windows 10 64bit RS4(1803) or later: The helper scripts make use of curl and tar, which are added from Windows 10 RS4(1803). 
@@ -33,3 +33,6 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 
 ## Resources
 - [NNSVS](https://github.com/r9y9/nnsvs)
+- [WinPython](https://winpython.github.io/) 
+- [MSYS2](https://www.msys2.org/)
+ 
