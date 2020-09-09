@@ -16,6 +16,6 @@ if %errorlevel% neq 0 (
   exit /b 1
 )
 
-echo Bootstrap ended successfully.
+echo Bootstrap finished.
 
 @echo on

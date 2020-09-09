@@ -19,6 +19,8 @@ set msys2_archive_path=%tmp_dir%\msys2.tar.xz
 set dest_root=%~dp0
 set msys2_dest_dir=%dest_root%
 
+set timeout_sec=60
+
 rem main routine
 rem Remove old directories
 call :check_directory %tmp_dir%
@@ -59,6 +61,9 @@ move %tmp_dir%\%winpython_python_relative_path% %msys2_dest_dir%\msys64\opt\pyth
 
 echo Initialize MSYS2.
 start /wait %msys2_dest_dir%\msys64\msys2.exe nul
+
+echo Wait %timeout_sec% seconds to finish initialization of MSYS2.
+timeout /t %timeout_sec% /nobreak >nul
 
 echo Add /opt/python to PATH.
 echo export PATH=/opt/python:/opt/python/Scripts:$PATH >> msys64\etc\bash.bashrc

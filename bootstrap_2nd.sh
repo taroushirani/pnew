@@ -1,5 +1,5 @@
 #! /bin/bash
-set -ux
+set -eux
 
 export PATH=/opt/python:/opt/python/Scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mingw64/bin
 
@@ -31,6 +31,7 @@ pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/wh
 # for CUDA 9.2
 # Follow instructions at this URL: https://github.com/pytorch/pytorch#from-source 
 
+## Install bandmat
 ## Install nnmnkwii, NNSVS
 # Pysptk require Microsoft Visual C++ 14.0.
 # You can download "Visual Studio Build Tools 2019" from https://visualstudio.microsoft.com/visual-cpp-build-tools/.
@@ -46,6 +47,11 @@ pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/wh
 # 
 export PATH=/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/BuildTools/MSBuild/Current/Bin/amd64/:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Community/MSBuild/Current/Bin/amd64/:/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio\ 14.0/VC/bin/amd64:/c/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.14393.0/x64/:/c/Program\ Files\ \(x86\)/Windows\ Kits/10/bin/10.0.18362.0/x64/:$PATH
 pip install pysptk
+
+# bandmat can't be installed via pip with python3.7 or later(https://github.com/MattShannon/bandmat/issues/10)
+git clone https://github.com/MattShannon/bandmat.git
+cd bandmat && pip install . && cd $WORKING_DIR
+
 git clone https://github.com/r9y9/nnmnkwii
 cd nnmnkwii && pip install . && cd $WORKING_DIR
 git clone https://github.com/r9y9/nnsvs 
