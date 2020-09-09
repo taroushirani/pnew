@@ -28,7 +28,7 @@ Some python libraries which NNSVS depends on require C/C++ compiler to make thei
 5. Launch msys64/MSYS.exe and do as you like.
 
 ## Known issues
-1. To use WinPython from MSYS2(mintty), you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it from pacman).
+1. To use WinPython interactively from mintty, you have to wrap it with [winpty](https://github.com/rprichard/winpty)(You can install it from pacman).
 2. "tar" program of MSYS2 is bsdtar, not GNU tar.  If you call tar from MSYS2, it may be Windows tar. In my experience, windows tar seems not to work with bzip2 of MSYS2. It becomes a problem when you run stage -1 of NNSVS recipe.  I recommend setting alias bsdtar as tar.
 
 ## Resources
