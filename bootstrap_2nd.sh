@@ -31,7 +31,6 @@ pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/wh
 # for CUDA 9.2
 # Follow instructions at this URL: https://github.com/pytorch/pytorch#from-source 
 
-## Install bandmat
 ## Install nnmnkwii, NNSVS
 # Pysptk require Microsoft Visual C++ 14.0.
 # You can download "Visual Studio Build Tools 2019" from https://visualstudio.microsoft.com/visual-cpp-build-tools/.
@@ -64,7 +63,8 @@ cd hts_engine_API/src && ./waf configure --prefix=/opt/hts_engine_API && ./waf b
 cp /opt/hts_engine_API/lib/hts_engine_API-1.dll /opt/python/
 
 ## sinsy
-# 
+# (1) Visual Studio does not create a import library when no function is declared with __declspec(dllexport), so we can't use sinsy.dll to build pysinsy.  We have to use static link on building.
+# (2) (Maybe) because of it, we have to link hts_engine_API explicitly when we build pysinsy.
 git clone  -q https://github.com/r9y9/sinsy
 cd sinsy/src/ && mkdir -p build && cd build 
 cmake -G "Visual Studio 14 2015 Win64" -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=/opt/sinsy -DHTS_ENGINE_INCLUDE_DIR=/opt/hts_engine_API/include/ -DHTS_ENGINE_LIB=/opt/hts_engine_API/lib/hts_engine_API.lib ..
@@ -78,3 +78,5 @@ cd pysinsy
 SINSY_INSTALL_PREFIX=/opt/sinsy/ HTS_ENGINE_API_INSTALL_PREFIX=/opt/hts_engine_API/ pip install .
 cd $WORKING_DIR
 
+### cleanup
+rm -rf $WORKING_DIR/bandmat $WORKING_DIR/nnmnkwii $WORKING_DIR/pysinsy $WORKING_DIR/hts_engine_API $WORKING_DIR/nnsvs $WORKING_DIR/sinsy

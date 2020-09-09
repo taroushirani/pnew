@@ -4,7 +4,7 @@ This repository contains the helper scripts to build [NNSVS](https://github.com/
 
 ## System requirements
 - Windows 10 64bit RS4(1803) or later: The helper scripts make use of curl and tar, which are added from Windows 10 RS4(1803). 
-- 4GB of free storage space: For singing voice synthesis(of course you want to do), additional 1-2GB will be needed for singing voice data and temporary files.
+- 4GB of free storage space: For singing voice synthesis(of course you want to do!), additional 1-2GB will be needed for singing voice data and temporary files.
 - [NVidia CUDA Toolkit (10.1/10.2)](https://developer.nvidia.com/cuda-toolkit) (optional): PyTorch supports CUDA 10.1 and 10.2. Be careful not to select CUDA 11.0.
 
 ## Build dependencies
