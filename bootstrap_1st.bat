@@ -62,7 +62,7 @@ move %tmp_dir%\%winpython_python_relative_path% %msys2_dest_dir%\msys64\opt\pyth
 echo Initialize MSYS2.
 start /wait %msys2_dest_dir%\msys64\msys2.exe nul
 
-echo Wait %timeout_sec% seconds to finish initialization of MSYS2.
+echo Wait %timeout_sec% seconds for finishing initialization of MSYS2.
 timeout /t %timeout_sec% /nobreak >nul
 
 echo Add /opt/python to PATH.

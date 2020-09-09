@@ -25,7 +25,7 @@ class ProgressFileObject(io.FileIO):
         io.FileIO.__init__(self, path, *args, **kwargs)
 
     def read(self, size):
-        print("Overall process: %d of %d" %(self.tell(), self._total_size))
+        print(f"Total {self.tell()}/{self._total_size} bytes are processed({self.tell()/self._total_size:.0%})")
         return io.FileIO.read(self, size)
 
 def on_progress(filename, position, total_size):
