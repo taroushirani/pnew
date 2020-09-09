@@ -1,7 +1,7 @@
 #! /bin/bash
 set -eux
 
-#export PATH=/opt/python:/opt/python/Scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mingw64/bin
+export PATH=/opt/python:/opt/python/Scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mingw64/bin
 
 ROOT_DIR=$(pwd)
 WORKING_DIR=/tmp
