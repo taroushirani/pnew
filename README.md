@@ -10,12 +10,11 @@ This repository contains the helper scripts to build [NNSVS](https://github.com/
 ## Build dependencies
 ### [Visual Studio Build Tools 2019](https://visualstudio.microsoft.com/visual-cpp-build-tools/) and [Windows 10 SDK 10.0.14393.0](https://developer.microsoft.com/windows/downloads/sdk-archive/)
 
-Some python libraries which NNSVS depends on require C/C++ compiler to make their python modules.  To be consistent with WinPython, it must be Microsoft Visual C++ 14.0. You can use [Visual Studio Build Tools 2019](https://visualstudio.microsoft.com/visual-cpp-build-tools/). There are some notes;
+Some python libraries which NNSVS depends on require C/C++ compiler to make their python modules.  To be consistent with WinPython, it must be Microsoft Visual C++ 14.0. You can use [Visual Studio Build Tools 2019](https://visualstudio.microsoft.com/visual-cpp-build-tools/). You can also use [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/). There are some notes;
 
 1. "MSVC v140" contains the toolkit of Microsoft Visual C++ 14.0, but it lacks MSBuild.exe.
 2. "MSVC v142" contains MSBuild.exe.
-3. The latest version of Windows 10 SDK which Microsoft Visual C++ 14.0 on Windows 10 can handle is 10.0.14393.0(for detail, please see [VS: Do not select a Windows SDK too high for current VS version (!2388) · Merge Requests · CMake / CMake · GitLab](https://gitlab.kitware.com/cmake/cmake/-/merge_requests/2388)).
-. You can download it from [Windows SDK archive](https://developer.microsoft.com/windows/downloads/sdk-archive/), but it lacks rc.exe.
+3. The latest version of Windows 10 SDK which Microsoft Visual C++ 14.0 on Windows 10 can handle is 10.0.14393.0(for detail, please see [VS: Do not select a Windows SDK too high for current VS version (!2388) · Merge Requests · CMake / CMake · GitLab](https://gitlab.kitware.com/cmake/cmake/-/merge_requests/2388)). You can download it from [Windows SDK archive](https://developer.microsoft.com/windows/downloads/sdk-archive/), but it lacks rc.exe.
 4. The latest Windows 10 SDK(10.0.18362.0) contains rc.exe.
 
 *Please be sure to check "MSVC v142", "Windows 10 SDK", "CMake", "MSVC v140" when you install "Visual Studio Build Tools".*
