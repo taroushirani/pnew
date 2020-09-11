@@ -17,7 +17,7 @@ pacman -Syuu --noconfirm
 
 ### Toolchains settings
 ## Install git, winpty
-pacman -Su --noconfirm git winpty
+pacman -Su --noconfirm git winpty tar
 
 ### Python settings
 ## Upgrade numpy, cython
