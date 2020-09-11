@@ -29,7 +29,9 @@ pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/wh
 # for CUDA 10.1
 #pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 # for CUDA 9.2
-# Follow instructions at this URL: https://github.com/pytorch/pytorch#from-source 
+# Follow instructions at this URL: https://github.com/pytorch/pytorch#from-source
+# for no CUDA
+# pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 
 ## Install nnmnkwii, NNSVS
 # Pysptk require Microsoft Visual C++ 14.0.
