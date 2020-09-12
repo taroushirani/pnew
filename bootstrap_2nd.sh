@@ -56,10 +56,7 @@ cd bandmat && pip install . && cd $WORKING_DIR
 git clone https://github.com/r9y9/nnmnkwii
 cd nnmnkwii && pip install . && cd $WORKING_DIR
 
-# Currently nnsvs has a bug about installation
-# Use locally forked version istead.
-#git clone https://github.com/r9y9/nnsvs
-git clone -b fix_hydra_1_0_0 https://github.com/taroushirani/nnsvs.git
+git clone https://github.com/r9y9/nnsvs
 cd nnsvs && pip install . && cd $WORKING_DIR
 
 ## hts_engine_API
