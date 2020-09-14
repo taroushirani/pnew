@@ -10,11 +10,13 @@ if %errorlevel% neq 0 (
 )
 
 echo Start 2nd stage
-msys64\usr\bin\bash.exe bootstrap_2nd.sh
+copy bootstrap_2nd.sh msys64\tmp
+call msys64\msys2_shell.cmd -mingw64 -defterm -no-start -c /tmp/bootstrap_2nd.sh
 if %errorlevel% neq 0 (
   echo 2nd stage failed.
   exit /b 1
 )
+del msys64\tmp\bootstrap_2nd.sh
 
 echo Bootstrap finished.
 echo You can close this window and launch msys64/msys2.exe to use NNSVS from Un*x userland,
