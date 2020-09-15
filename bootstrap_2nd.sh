@@ -20,6 +20,9 @@ pacman -Syuu --noconfirm
 pacman -Su --noconfirm git winpty tar
 
 ### Python settings
+## Upgrade pip
+python -m pip install -U pip
+
 ## Upgrade numpy, cython
 pip install -U numpy cython
 
@@ -52,6 +55,10 @@ pip install pysptk
 # bandmat can't be installed via pip with python3.7 or later(https://github.com/MattShannon/bandmat/issues/10)
 git clone https://github.com/MattShannon/bandmat.git
 cd bandmat && pip install . && cd $WORKING_DIR
+
+# Clone locally modified version of fastdtw to install compiled version of fastdtw. 
+git clone -b vs_2015 https://github.com/taroushirani/fastdtw.git
+cd fastdtw && pip install . && cd $WORKING_DIR
 
 git clone https://github.com/r9y9/nnmnkwii
 cd nnmnkwii && pip install . && cd $WORKING_DIR
