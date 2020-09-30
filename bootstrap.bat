@@ -22,7 +22,7 @@ rem msys2 is automatically killed when msys2-runtime is upgraded, so retry is ne
   echo 2nd stage failed.
   if %retry_num% leq %max_retry_num% (
      echo Retry 2nd stage.
-     set retry_num = retry_num + 1
+     set /a retry_num=retry_num+1
      goto :retry
   ) else (
      exit /b 1
