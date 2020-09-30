@@ -3,9 +3,10 @@ setlocal enabledelayedexpansion
 cd %~dp0
 
 set max_retry_num=1
+set dest_root=%~dp0\dest
 
-echo Start 1st stage
-call bootstrap_1st.bat
+echo Start 1st stage 
+call bootstrap_1st.bat %dest_root%
 if %errorlevel% neq 0 (
   echo 1st stage failed.
   exit /b 1

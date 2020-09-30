@@ -16,10 +16,12 @@ set winpython_python_relative_path=WPy64-3850\python-3.8.5.amd64
 
 set msys2_archive_path=%tmp_dir%\msys2.tar.xz
 
-set dest_root=%~dp0
+set dest_root=%1
 set msys2_dest_dir=%dest_root%
 
 rem main routine
+echo dest_root=%dest_root%
+
 rem Remove old directories
 call :check_directory %tmp_dir%
 rem call :check_directory %dest_root%
