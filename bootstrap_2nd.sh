@@ -27,14 +27,16 @@ python -m pip install -U pip
 pip install -U numpy cython
 
 ## Install pytorch
+# for CUDA 11.0
+#pip install torch===1.7.0+cu110 torchvision===0.8.1+cu110 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 # for CUDA 10.2
-pip install torch===1.6.0 torchvision===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install torch===1.7.0 torchvision===0.8.1 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 # for CUDA 10.1
-#pip install torch==1.6.0+cu101 torchvision==0.7.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+#pip install torch==1.7.0+cu101 torchvision==0.8.1+cu101 torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 # for CUDA 9.2
 # Follow instructions at this URL: https://github.com/pytorch/pytorch#from-source
 # for no CUDA
-# pip install torch==1.6.0+cpu torchvision==0.7.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+#pip install torch==1.7.0+cpu torchvision==0.8.1+cpu torchaudio===0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
 
 ## Install nnmnkwii, NNSVS
 # Pysptk require Microsoft Visual C++ 14.0.
