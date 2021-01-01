@@ -70,7 +70,8 @@ cd nnsvs && pip install . && cd $WORKING_DIR
 
 ## hts_engine_API
 git clone https://github.com/r9y9/hts_engine_API
-cd hts_engine_API/src && ./waf configure --prefix=/opt/hts_engine_API && ./waf build  && ./waf install && cd $WORKING_DIR
+cd hts_engine_API/src && mkdir -p build && cd build && cmake  -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/opt/hts_engine_API .. && make -j > hts_engine_API_build.log 2>&1 &&  make install && cd $WORKING_DIR
+
 # Copy hts_engine_API-1.dll to the directory set in Windows PATH environment variable.
 cp /opt/hts_engine_API/lib/hts_engine_API-1.dll /opt/python/
 
